@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(63, 63, 63);
+}
+.dokme{
+   margin: 30px;
+   background-color:transparent;
+   border: none;
+   color: rgb(255, 255, 255);
+   font-size: 40px;
+   z-index: 1;
+   font-weight: bold;
+   position: relative;
+   cursor: pointer;
+}
+.close::after{
+  content: "\002716";
+  transition: all 0.5s ease-in-out;
+  }
+.close{
+  transform: translate(-20px , -30px);
+  transition: all 0.5s ease-in-out;
+  font-size: 25px;
+  
+
+  }
+  .open::after{
+  content: "\0030A0";
+  transition: all 0.5s ease-in-out;
+  font-size: 35px;
+}
+
+.sidebar{
+  opacity: 0;
+  width: 0px;
+  height: 100vh;
+  background: darkgray;
+  position: fixed;
+  top: 0px;
+  text-align: center;
+  transition: width 1ms, opacity 1s;
+  overflow-x: hidden;
+}
+h1{
+  text-align: center;
+  width: auto;
+}
+.show{
+  width: 200px;
+  opacity: 1;
+  transition: width 0.75s, opacity 1s;
+}
